@@ -1,0 +1,27 @@
+h1 {
+  margin-left: 500px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 60px;
+  
+}
+
+div.bio {
+  background-color:Orange;
+  margin:10px;
+  padding:5px;
+}
+
+div.web-experience{
+	background-color:Orange;
+	margin:10px;
+	padding:5px;
+}
+
+p {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  padding:5px;
+}
+body {
+  background-color:Tomato;
+  
+}
