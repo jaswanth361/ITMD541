@@ -1,0 +1,162 @@
+/* Flexbox Part 1 */
+
+#flex-section1 ul {
+	text-align: left;
+	color: yellowgreen;
+	background-color: sandybrown;
+	margin: 10px;
+	padding: 20px 50px;
+	border-radius: 1em 50px 10px;
+	border: ridge 1em palevioletred;
+}
+
+/* end Flexbox Part 1 */
+
+
+/* Flexbox Part 2 */
+
+#flex-section2 ul {
+	border-radius: 2em;
+	border: groove 1em rgb(145, 255, 0);
+	background-color: rgb(102, 151, 153);
+	padding: 20px 50px;
+	margin: 10px;
+}
+
+#flex-section2 li {
+	padding: 10px;
+	margin: 15px;
+	border-style: solid;
+	background-color: rgb(221, 228, 156);
+	color: rgb(102, 198, 205);
+	border-radius: 5px 15px;
+}
+
+#flex-section2 .item1 {
+	font-family: papyrus;
+	font-size: medium;
+}
+
+#flex-section2 .item2 {
+	font-family: papyrus;
+	font-weight: 900;
+}
+
+#flex-section2 .item3 {
+	font-family: papyrus;
+}
+
+/* end Flexbox Part 2 */
+
+
+/* Flexbox Part 3 */
+
+#flex-section3 .box {
+	background-color: rgb(122, 209, 173);
+	margin: 5px;
+	padding: 20px 2px 2px 20px;
+	border-radius: 1em 15px 50px;
+	border: groove 1em rgb(114, 250, 239);
+}
+
+#flex-section3 .tags ul {
+	margin-left: 10px;
+	padding: 25px;
+	background-color: rgb(235, 226, 110);
+}
+
+/* end Flexbox Part 3 */
+
+
+/* Grid Part 1 */
+
+#grid-section1 .grid {
+	background-color: rgb(135, 235, 218);
+	margin: 20px;
+	padding: 15px;
+	border: groove 1em rgb(233, 204, 38);
+}
+
+/* end Grid Part 1 */
+
+
+/* Grid Part 2 */
+
+#grid-section2 .gridboxblue {
+	border-radius: 20px 5px;
+	margin: 20px;
+	padding: 5px;
+}
+
+#grid-section2 .gridboxred {
+	border-radius: 20px 5px;
+	margin: 20px;
+	padding: 5px;
+}
+
+/* end Grid Part 2 */
+
+
+/* Grid Part 3 */
+
+#grid-section3 .grid {
+	margin: 10px;
+	padding: 5px;
+	background-color: rgb(205, 155, 63);
+	border-radius: 10px 40px 40px 10px;
+	border: solid rgb(240, 23, 88) 10px;
+}
+
+#grid-section3 .box1 {
+	margin: 10px;
+	border-radius: 20px 5px;
+	background-color: rgb(216, 230, 176);
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#grid-section3 .box2 {
+	margin: 10px;
+	border-radius: 20px 5px;
+	background-color: rgb(152, 244, 251);
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#grid-section3 .box3 {
+	margin: 10px;
+	border-radius: 20px 5px;
+	background-color: rgb(210, 176, 230);
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#grid-section3 .box4 {
+	margin: 10px;
+	border-radius: 20px 5px;
+	background-color: rgb(152, 167, 251);
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* end Grid Part 3 */
+
+
+/* Transition Part */
+
+#transition-section .box a {
+	display: inline-block;
+	background-color: #ccc;
+	color: #000;
+	padding: 20px;
+	margin: auto;
+	text-decoration: none;
+	font-family: fantasy;
+}
+
+	#transition-section .box a:hover {
+		background-color: #b8cc00;
+		color: rgb(255, 255, 255);
+		border-radius: 50%;
+		border: none;
+		margin-left: 20px;
+		font-family: papyrus;
+	}
+
+/* end Transition Part */
