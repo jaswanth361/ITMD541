@@ -1,14 +1,25 @@
 /* Flexbox Part 1 */
 
-#flex-section1 ul {
-	list-style: none;
-	display: flex;
-	gap:50px;
-	margin-left: 10px;
-	margin-top: 0%;
-	margin-bottom: 0%;
+/* Flexbox Part 1 */
 
+#flex-section1 ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+	margin: 10px;
 }
+
+#flex-section1 .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #db3434;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* end Flexbox Part 1 */
+
 
 /* end Flexbox Part 1 */
 
@@ -16,62 +27,88 @@
 /* Flexbox Part 2 */
 
 #flex-section2 ul {
-	display: flex;
-    flex-wrap: wrap;
+    display: flex;
+    list-style: none;
     padding: 0;
-    margin: 0;
-
+	
 }
 
 #flex-section2 li {
-	flex: 1;
-    min-width: 0;
-    list-style: none;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #070606;
+	font-weight: bold;
 }
 
 #flex-section2 .item1 {
-	order: 1;
+    order: 1;
 }
 
 #flex-section2 .item2 {
-	order: 3;
+    order: 3;
 }
 
 #flex-section2 .item3 {
-	order: 2;
+    order: 2;
 }
 
 /* end Flexbox Part 2 */
 
 
+
 /* Flexbox Part 3 */
 
 #flex-section3 .box {
-	display:flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#flex-section3 .card {
+    text-align: center;
+}
+
+#flex-section3 .card img {
+    width: 200px;
+    border-radius: 5px;
+}
+
+#flex-section3 .tags {
+    margin-top: 10px;
 }
 
 #flex-section3 .tags ul {
-	list-style: none;
-	display:flex;;
-	flex-wrap: wrap;
-	padding-left: 0;
-	margin:0%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 5px;
+}
+
+#flex-section3 .tags li {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 5px;
 }
 
 /* end Flexbox Part 3 */
 
 
+
 /* Grid Part 1 */
 
 #grid-section1 .grid {
-	display:grid;
-	grid-template-columns: repeat(4,2fr);
-    grid-auto-rows: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
 
+#grid-section1 .greybox {
+    background-color: #f0f0f0;
+    padding: 40px; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
 }
 
 /* end Grid Part 1 */
@@ -79,57 +116,73 @@
 
 /* Grid Part 2 */
 
+#grid-section2 .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    height: 100%; /* Ensure the grid takes the full height of the container */
+}
+
 #grid-section2 .gridboxblue {
-	order: 2;
-	grid-column-start: 2;
-	grid-column-end: 4;
-	grid-row-start: 1;
-	grid-row-end: 4;
-	z-index: 2;
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+	width: 125%;
+	opacity: 0.9;
+    grid-column: span 2; /* Span 2 columns */
+    z-index: 1; /* Ensure the blue box is positioned above the red box */
 }
 
 #grid-section2 .gridboxred {
-	order: 1;
-	grid-row-start:2;
-	grid-row-end: 3;
-	grid-column-start: 1;
-	grid-column-end: 3;
-
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px;
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 2; /* Span 2 rows */
 }
 
 /* end Grid Part 2 */
 
 
+
+
 /* Grid Part 3 */
 
 #grid-section3 .grid {
-     display: grid;
-	 grid-template-columns: 2fr 1fr; /* Two columns with a ratio of 2:1 */
-     grid-template-rows: 100px 300px 100px; 
-	 gap: 10px;
-	 
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 column grid with the first column twice the width of the second column */
+    grid-template-rows: 100px 300px 100px; /* 3 rows with specified heights */
+    gap: 10px;
 }
 
 #grid-section3 .box1 {
-	order: 1;
-	grid-column: span 3;
-	grid-row: span 1;
+    grid-column: span 2; /* Span 2 columns */
+    grid-row: span 1; /* Span 1 row */
+    background-color: #ddd;
+    padding: 20px;
 }
 
 #grid-section3 .box2 {
-	order: 3;
-	grid-column: span 2;
-	
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 1; /* Span 1 row */
+    background-color: #ddd;
+    padding: 20px;
 }
 
 #grid-section3 .box3 {
-	order: 2;
-	grid-column: span 1;
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 1; /* Span 1 row */
+    background-color: #ddd;
+    padding: 20px;
 }
 
 #grid-section3 .box4 {
-	order: 4;
-	grid-column: span 3;
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 1; /* Span 1 row */
+    background-color: #ddd;
+    padding: 20px;
+	width: 150%;
 }
 
 /* end Grid Part 3 */
