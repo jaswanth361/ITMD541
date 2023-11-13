@@ -1,13 +1,13 @@
 /* Flexbox Part 1 */
 
 #flex-section1 ul {
-	text-align:left;
-	color:yellowgreen;
-	background-color:sandybrown;
-	margin: 10px;
-	padding: 20px 50px;
-	border-radius: 1em 50px 10px;
-	border: ridge 1em palevioletred;
+	list-style: none;
+	display: flex;
+	gap:50px;
+	margin-left: 10px;
+	margin-top: 0%;
+	margin-bottom: 0%;
+
 }
 
 /* end Flexbox Part 1 */
@@ -16,36 +16,29 @@
 /* Flexbox Part 2 */
 
 #flex-section2 ul {
-	border-radius: 2em;
-	border: groove 1em rgb(145, 255, 0);
-	background-color: rgb(102, 151, 153);
-	padding: 20px 50px;
-	margin: 10px;
+	display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+
 }
 
 #flex-section2 li {
-	padding: 10px;
-	margin: 15px;
-	border-style:solid;
-	background-color:rgb(221, 228, 156);
-	color: rgb(102, 198, 205);
-	border-radius: 5px 15px;
-
+	flex: 1;
+    min-width: 0;
+    list-style: none;
 }
 
 #flex-section2 .item1 {
-	font-family: papyrus;
-	font-size: medium;
-
+	order: 1;
 }
 
 #flex-section2 .item2 {
-	font-family: papyrus;
-	font-weight: 900;
+	order: 3;
 }
 
 #flex-section2 .item3 {
-	font-family: papyrus;
+	order: 2;
 }
 
 /* end Flexbox Part 2 */
@@ -54,18 +47,18 @@
 /* Flexbox Part 3 */
 
 #flex-section3 .box {
-	background-color: rgb(122, 209, 173);
-	margin: 5px;
-	padding: 20px 2px 2px 20px;
-	border-radius: 1em 15px 50px;
-	border: groove 1em rgb(114, 250, 239); 
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 #flex-section3 .tags ul {
-	margin-left: 10px;
-	padding: 25px;
-	background-color: rgb(235, 226, 110);
-
+	list-style: none;
+	display:flex;;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin:0%;
 }
 
 /* end Flexbox Part 3 */
@@ -74,10 +67,11 @@
 /* Grid Part 1 */
 
 #grid-section1 .grid {
-	background-color: rgb(135, 235, 218);
-	margin: 20px;
-	padding: 15px;
-	border: groove 1em rgb(233, 204, 38);
+	display:grid;
+	grid-template-columns: repeat(4,2fr);
+    grid-auto-rows: 100px;
+    gap: 20px;
+
 }
 
 /* end Grid Part 1 */
@@ -86,16 +80,20 @@
 /* Grid Part 2 */
 
 #grid-section2 .gridboxblue {
-	border-radius: 20px 5px;
-	margin: 20px;
-	padding: 5px;
-
+	order: 2;
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 4;
+	z-index: 2;
 }
 
 #grid-section2 .gridboxred {
-	border-radius: 20px 5px;
-	margin: 20px;
-	padding: 5px;
+	order: 1;
+	grid-row-start:2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 3;
 
 }
 
@@ -105,45 +103,33 @@
 /* Grid Part 3 */
 
 #grid-section3 .grid {
-	margin: 10px;
-	padding: 5px;
-	background-color: rgb(205, 155, 63);
-	border-radius: 10px 40px 40px 10px;
-	border: solid rgb(240, 23, 88) 10px;
-
+     display: grid;
+	 grid-template-columns: 2fr 1fr; /* Two columns with a ratio of 2:1 */
+     grid-template-rows: 100px 300px 100px; 
+	 gap: 10px;
+	 
 }
 
 #grid-section3 .box1 {
-	margin: 10px;
-	border-radius: 20px 5px;
-	background-color: rgb(216, 230, 176);
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+	order: 1;
+	grid-column: span 3;
+	grid-row: span 1;
 }
 
 #grid-section3 .box2 {
-	margin: 10px;
-	border-radius: 20px 5px;
-	background-color:rgb(152, 244, 251);
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+	order: 3;
+	grid-column: span 2;
+	
 }
 
 #grid-section3 .box3 {
-	margin: 10px;
-	border-radius: 20px 5px;
-	background-color: rgb(210, 176, 230);
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+	order: 2;
+	grid-column: span 1;
 }
 
 #grid-section3 .box4 {
-	margin: 10px;
-	border-radius: 20px 5px;
-	background-color:rgb(152, 167, 251);
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-
+	order: 4;
+	grid-column: span 3;
 }
 
 /* end Grid Part 3 */
@@ -155,23 +141,15 @@
 	display: inline-block;
 	background-color: #ccc;
 	color: #000;
+	transition-duration: 3s;
 	padding: 20px;
-	margin:auto;
 	text-decoration: none;
-	font-family: fantasy;
-
-
 }
 
 #transition-section .box a:hover {
-	background-color: #b8cc00;
-	color: rgb(255, 255, 255);
-	border-radius: 50%;
-	border: none;
-	margin-left: 20px;
-	font-family: papyrus;
-
-
+	background-color: #cc0000;
+	color: #fff;
+	transition-duration: 0.5s;
 }
 
 /* end Transition Part */
